@@ -5,6 +5,7 @@ class PersonalSite
     case env["PATH_INFO"]
     when '/' then index
     when '/about' then about
+    when '/reset.css' then reset_css
     when '/main.css' then css
     else
       error
@@ -25,6 +26,10 @@ class PersonalSite
   
   def self.render_view(page, code = '200')
     [code, {'Content-Type' => 'text/html'}, [File.read("./app/views/#{page}")]]
+  end
+  
+  def self.reset_css
+    render_static('reset.css')
   end
   
   def self.css
