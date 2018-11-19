@@ -1,3 +1,35 @@
 body {
-  background-color: blue;
+  background-color: white;
+  font-family: 'Roboto', sans-serif;
+}
+
+nav {
+  background-color: #ADADAD;
+  display: block;
+  height: 60px;
+  width: 100%;
+}
+nav ul {
+  display: inline-block;
+  float: right;
+  font-size: 15px;
+  color: black;
+  height: 60px;
+  background-color: #6B6B6B;
+}
+nav li {
+  display: inline-block;
+  padding: 24px;
+}
+nav a {
+  display: inline-block;
+  color: black;
+  text-transform: uppercase;
+  text-decoration: none;
+  height: inherit;
+}
+nav a:hover {
+  background-color: #001D91;
+  color: white;
+  font-weight: 500;
 }
