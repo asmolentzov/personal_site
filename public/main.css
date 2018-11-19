@@ -1,12 +1,13 @@
 body {
   background-color: white;
   font-family: 'Roboto', sans-serif;
+  height: 100%;
 }
 
 nav {
   background-color: #ADADAD;
   display: block;
-  height: 60px;
+  height: 7%;
   width: 100%;
 }
 nav ul {
@@ -14,12 +15,12 @@ nav ul {
   float: right;
   font-size: 15px;
   color: black;
-  height: 60px;
+  height: 100%;
   background-color: #6B6B6B;
 }
 nav li {
   display: inline-block;
-  padding: 24px;
+  padding: 21px 40px;
 }
 nav a {
   display: inline-block;
@@ -35,8 +36,14 @@ nav a:hover {
 }
 
 #hero {
-  height: 600px;
+  height: 93%;
   background: url('anna-mirror.jpg') no-repeat;
   background-position: center;
   background-size: cover;
+}
+#hero h1 {
+  font-size: 80px;
+  font-weight: bold;
+  float: right;
+  padding: 100px 50px;
 }
