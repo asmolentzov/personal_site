@@ -41,9 +41,23 @@ nav a:hover {
   background-position: center;
   background-size: cover;
 }
+#hero h1, h3 {
+  text-align: right;
+}
 #hero h1 {
   font-size: 80px;
   font-weight: bold;
-  float: right;
-  padding: 100px 50px;
+  padding: 110px 50px 50px 50px;
+}
+#hero h3 {
+  font-size: 40px;
+  font-weight: bold;
+  padding: 0 70px;
+}
+#hero a {
+  color: black;
+  text-decoration: none;
+}
+#hero a:hover {
+  color: #001D91;
 }
