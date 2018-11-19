@@ -7,6 +7,7 @@ class PersonalSite
     when '/about' then about
     when '/reset.css' then reset_css
     when '/main.css' then css
+    when '/blog' then blog
     else
       error
     end
@@ -18,6 +19,10 @@ class PersonalSite
   
   def self.about
     render_view('about.html')
+  end
+  
+  def self.blog
+    render_view('blog.html')
   end
   
   def self.error
