@@ -33,3 +33,10 @@ nav a:hover {
   color: white;
   font-weight: 500;
 }
+
+#hero {
+  height: 600px;
+  background: url('anna-mirror.jpg') no-repeat;
+  background-position: center;
+  background-size: cover;
+}
