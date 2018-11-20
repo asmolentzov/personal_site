@@ -1,4 +1,5 @@
 require 'rack'
+require 'tilt'
 
 class PersonalSite
   def self.call(env)
@@ -39,7 +40,8 @@ class PersonalSite
   end
   
   def self.render_view(page, code = '200')
-    [code, {'Content-Type' => 'text/html'}, [File.read("./app/views/#{page}")]]
+    template = Tilt.new('./app/views/layout.erb')
+    [code, {'Content-Type' => 'text/html'}, [template.render {File.read("./app/views/#{page}")}]]
   end
   
   def self.check_static(asset)
