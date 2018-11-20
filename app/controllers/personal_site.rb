@@ -9,7 +9,7 @@ class PersonalSite
     when '/main.css' then css
     when '/blog' then blog
     else
-      error
+      check_static(env["PATH_INFO"])
     end
   end
   
@@ -33,12 +33,12 @@ class PersonalSite
     [code, {'Content-Type' => 'text/html'}, [File.read("./app/views/#{page}")]]
   end
   
-  def self.reset_css
-    render_static('reset.css')
-  end
-  
-  def self.css
-    render_static('main.css')
+  def self.check_static(asset)
+    if File.file?("./public/#{asset}")
+      render_static(asset)
+    else
+      error
+    end
   end
   
   def self.render_static(asset)
